@@ -1,0 +1,30 @@
+// Kusto クエリは、テーブル式ステートメントという形式に従って、以下のように記述します。
+// source1 | operator 1 | operator2 | renderInstruction
+// 【参考】: 『テーブル式ステートメント』
+// https://docs.microsoft.com/ja-jp/azure/data-explorer/kusto/query/tabularexpressionstatements
+
+// 例１: Kusto クエリの構文を理解する
+tbllogs  // テーブル
+| where ["date"] >= datetime(2015-06-13) and ["date"] < datetime(2015-06-14)  // 該当する日時のデータのみをフィルタ
+| where ["time"] == "00:00:00"  // time が 00:00:00 のデータのみ抽出
+| count  // 件数をカウント
+
+// 例２: 検索範囲の設定（where）と表示列の設定（project）
+tbllogs
+| where ["date"] >= datetime(2015-06-13) and ["date"] < datetime(2015-06-14)
+| where ["time"] == "00:00:00"
+| project ["s-ip"], ["cs-method"], ["cs-url-stem"]
+
+// 例３: 取得レコードの制限（take）
+tbllogs
+| take 1
+| project ["s-ip"], ["cs-url-stem"]
+
+// 例４: ソート（top / asc / desc）
+tbllogs
+| top 2 by ["date"] desc
+| project ["date"], ["s-ip"], ["cs-url-stem"]
+
+// 例５: カスタム列作成（extend）
+tbllogs
+| extend ['cs_User-Agent_hoge'] = strcat(['cs_User-Agent_'], ['hoge'])

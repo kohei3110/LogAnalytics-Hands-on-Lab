@@ -11,11 +11,17 @@
         },
         "clusterName": {
             "defaultValue": "[concat('adx', uniqueString(resourceGroup().id))]",
-            "type": "String"
+            "type": "String",
+            "metadata": {
+                "description": "Data Explorer クラスター名"
+            }
         },
         "storageAccountName": {
             "defaultValue": "[concat('st', uniqueString(resourceGroup().id))]",
-            "type": "String"
+            "type": "String",
+            "metadata": {
+                "description": "ストレージアカウント名"
+            }
         },
         "vmName": {
             "type": "string",
@@ -47,7 +53,7 @@
             "type": "string",
             "defaultValue": "10.0.0.0/16",
             "metadata": {
-                "description": "IPv4 アドレス空間"
+                "description": "仮想ネットワーク IPv4 アドレス空間"
             }
         },
         "subnetPrefix": {
