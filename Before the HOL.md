@@ -14,7 +14,7 @@ July 2022
 
 <br />
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)]()
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkohei3110%2FLogAnalytics-Hands-on-Lab%2Fmaster%2Fazure%2Fazure-resources.json)
 
 ### パラメーター
 - **logAnalyticsWorkspace**: Log Analytics ワークスペース名（長さ：4 ～ 63 / 有効な文字：英数字、およびハイフン）
