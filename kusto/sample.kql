@@ -28,3 +28,8 @@ tbllogs
 // 例５: カスタム列作成（extend）
 tbllogs
 | extend ['cs_User-Agent_hoge'] = strcat(['cs_User-Agent_'], ['hoge'])
+
+// 例６: 1分ごとに正常にログを転送している仮想マシンの台数を折れ線グラフで確認
+Heartbeat
+| summarize dcount(ComputerIP) by bin(TimeGenerated, 1m)
+| render timechart
