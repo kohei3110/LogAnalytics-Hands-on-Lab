@@ -11,7 +11,7 @@ June 2022
   * [Task 1: Blob ストレージへのログファイルアップロード](#task-1--blob--------------------)
   * [Task 2: Data Explorer へのデータロード](#task-2--data-explorer---------)
   * [Task 3: Kusto クエリ実行](#task-3--kusto------)
-  * [Task 4-1: Data Explorer へのデータロード自動化 ～Event Hubs / Event Grid～](#task-4-1--data-explorer--------------event-hubs---event-grid-)
+  * [Task 4: Data Explorer へのデータロード自動化 ～Event Hubs / Event Grid～](#task-4--data-explorer--------------event-hubs---event-grid-)
 - [Exercise 2: Azure Monitor エージェントを使った Log Analytics へのログ収集](#exercise-2--azure-monitor------------log-analytics-------)
   * [Task 1: データ収集ルール作成](#task-1------------)
   * [Task 2: Log Analytics ワークスペースへのクエリ実行](#task-2--log-analytics---------------)
@@ -149,7 +149,7 @@ tbllogs
   | extend ['cs_User-Agent_hoge'] = strcat(['cs_User-Agent_'], ['hoge'])
   ```
 
-### Task 4-1: Data Explorer へのデータロード自動化 ～Event Hubs / Event Grid～
+### Task 4: Data Explorer へのデータロード自動化 ～Event Hubs / Event Grid～
 
 
 - Data Explorer クラスターのデータベースページから、`db01`を選択

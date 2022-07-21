@@ -10,6 +10,18 @@ July 2022
 
 <br />
 
+## Azure リソースを展開する前に
+
+以下の手順を行ってください。
+
+- GitHub アカウントの作成
+
+    - GitHub トップページ右上の `Sign up` から、アカウントを作成
+
+    <img src="images/github1.png" />
+
+- Git（[インストール方法](https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)）
+
 ## リソースの展開
 
 <br />
@@ -49,6 +61,10 @@ July 2022
 
 <br />
 
-## リソースの設定
+## リポジトリのクローン
 
-※ **リポジトリを自身の GitHub アカウントに Fork ** してから作業を行ってください。
+コマンドプロンプトから、ローカルPCの任意のディレクトリにて、以下を実行
+
+```
+git clone https://github.com/kohei3110/LogAnalytics-Hands-on-Lab.git
+```
