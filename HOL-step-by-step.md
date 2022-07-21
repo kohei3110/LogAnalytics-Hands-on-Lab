@@ -63,11 +63,27 @@ June 2022
 
   <img src="images/upload-blob-6.png" />
 
+- 作成したデータベース（db01）を選択し、**クエリ**を選択
+
+  <img src="images/upload-blob-18.png" />
+
+- 以下のクエリを入力し、作成されたデータベースが出力されることを確認
+
+```
+.show databases
+```
+
+  <img src="images/upload-blob-19.png" />
+
 - Data Explorer クラスターの概要ページの **URI** をコピーし、ブラウザに貼り付けて表示
 
   <img src="images/upload-blob-3.png" />
 
-- データ タブの**新しいデータの取り込み**を選択
+  ※作成したクラスターが表示されていない場合は、**クラスターの追加**をクリックし、クラスターの URI を入力
+
+  <img src="images/upload-blob-20.png" />
+
+- **データ管理**ページで、**BLOB からのデータの取り込み**、**Ingest**の順に選択
 
   <img src="images/upload-blob-4.png" />
 
