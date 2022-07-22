@@ -75,6 +75,18 @@ June 2022
 
   <img src="images/upload-blob-19.png" />
 
+- データベース（`db01`）に、ハンズオンで使用しているユーザーを追加
+
+```
+.add database db01 users ('aaduser=xxxxxx@hogehoge.com') '<ご自身の名前>'
+```
+
+  **コマンド例**
+
+  ```
+  .add database db01 users ('aaduser=koheisaito@contoso.com') 'saito'
+  ```
+
 - Data Explorer クラスターの概要ページの **URI** をコピーし、ブラウザに貼り付けて表示
 
   <img src="images/upload-blob-3.png" />
@@ -225,9 +237,9 @@ tbllogs
 
 ### Task 1: データ収集ルール作成
 
-- Azure Monitor の**データ収集ルール**から**+作成**を選択
+- Azure Monitor の**データ収集ルール**から **+作成** を選択
 
-- 基本 タブで以下を入力し、**次へ: リソース>**を選択
+- 基本 タブで以下を入力し、 **次へ: リソース>** を選択
 
   - **ルール名**: rule1（任意）
   - **サブスクリプション名**: ハンズオンで使用しているサブスクリプション
@@ -237,15 +249,15 @@ tbllogs
 
   <img src="images/monitor1.png" />
 
-- リソース タブでハンズオンで使用しているリソースグループ内の仮想マシンを追加し、**次へ: 収集と配信>**を選択
+- リソース タブでハンズオンで使用しているリソースグループ内の仮想マシンを追加し、 **次へ: 収集と配信>** を選択
 
   <img src="images/monitor2.png" />
 
-- データソースの追加 タブで以下を入力し、**次へ: 確認および作成**を選択
+- データソースの追加 タブで以下を入力
 
   - **データソースの種類**
   
-    - **Windows event logs** タブで以下を選択し、**次へ: ターゲット>** を選択
+    - **Windows event logs** タブで以下（全て）を選択
       
       - **イベントログ**: 基本
       
@@ -268,6 +280,8 @@ tbllogs
           - 詳細
 
     <img src="images/monitor3.png" />
+
+    - **次へ: ターゲット>** を選択
 
     - データソースの追加 タブで以下を入力し、**データ ソースの追加**を選択
 
@@ -296,9 +310,13 @@ tbllogs
 
     <img src="images/monitor4.png" />
 
+- **次へ: 確認および作成**を選択
+
+    <img src="images/monitor14.png" />
+
 - 入力内容を確認し、**作成**を選択
 
-    <img src="images/monitor4.png" />
+    <img src="images/monitor6.png" />
 
 - 仮想マシンの**拡張機能とアプリケーション**タブから、 Azure Monitor エージェントがインストールされていることを確認
 
@@ -311,6 +329,8 @@ tbllogs
 ```
 Heartbeat
 ```
+
+**※表示に5分ほどかかります。**
 
   <img src="images/monitor8.png" />
 
